@@ -6,7 +6,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 //ambil data dari tabel mahasiswa
 //$result = mysqli_query($conn, "SELECT * FROM mahasiswa");
 
-?>s
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +14,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 </head>
 <body>
 	<h1>Daftar Mahasiswa</h1>
+	<a href="tambah.php">Tambah data</a>
 	<table border="1" cellpadding="10" cellspacing="0">
 		<tr>
 			<th>No.</th>
@@ -30,7 +31,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 			<td><?= $i; ?></td>
 			<td>
 				<a href="">Ubah</a> | 
-				<a href="">Hapus</a>
+				<a href="hapus.php?id=<?= $row["id"];?>" onclick="return confirm('yakin?');">Hapus</a>
 			</td>
 			<td>
 				<img src="img/<?= $row["gambar"];?>" whide="50">
