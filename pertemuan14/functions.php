@@ -118,15 +118,6 @@ function cari($keyword) {
 	";
 	return query($query);
 }
-function registrasi($data){
-	global $conn;
-	$username = strtolower(stripcslashes($data["username"]));
-	$password = mysqli_real_ascape_string($conn, $data["password"]);
-	$password2 = mysqli_real_ascape_string($conn, $data["password2"]);
-
-	//cek konfirmasi password
-	if ($password !== $password2)
-}
 
 
 ?>
