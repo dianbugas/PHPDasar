@@ -91,7 +91,7 @@ function ubah($data) {
 	if($_FILES['gambar']['error'] === 4 ) {
 		$gambar = $gambarLama;
 	}else{
-		$gambar = upload();
+		$gambar = uplode();
 	}
 
 	$query = "UPDATE mahasiswa SET
