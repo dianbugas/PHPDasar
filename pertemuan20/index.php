@@ -35,21 +35,17 @@ if (isset($_POST["cari"]) ){
 			display: none;
 
 		}
-		@media print{
-			.logout, .tambah, .from-cari{
-				display: none;
-			}
-		}
 	</style>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/script.js"></script>
 </head>
 <body>
-	<a href="logout.php" class="logout">Logout</a>
+	<a href="logout.php">Logout</a> | 
+	<a href="cetak.php" target="_blank">Cetak</a>
 	<h1>Daftar Mahasiswa</h1>
-	<a href="tambah.php" class="tambah">Tambah data</a>
+	<a href="tambah.php">Tambah data</a>
 	<br><br>
-	<form action="" method="post" class="from-cari">
+	<form action="" method="post">
 		<input type="text" name="keyword" size="40" autofocus placeholder="masukkan keyword pencaharian" autocomplete="off" id="keyword">
 		<button type="submit" name="cari" id="tombol-cari">Cari</button>
 		<img src="img/loader2.gif" class="loader">
